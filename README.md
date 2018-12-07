@@ -1,25 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitter Project for Tech Talent South Solution by Pat Camp
 
-Things you may want to cover:
+* Ruby version 2.4.1
 
-* Ruby version
+ If cloning, you'll need to install gems by running:
 
-* System dependencies
+    $ bundle install
 
-* Configuration
+ If you want to load seed data, run
 
-* Database creation
+    $ rails db:seed
 
-* Database initialization
+The seed data uses the Faker gem - it will remove all existing tweets before reloading users.
 
-* How to run the test suite
+  The login for the primary user is twituser@user.com password 111111.  
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* For test development only
 
 * ...
 # twitter_techtalent

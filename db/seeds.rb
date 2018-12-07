@@ -33,11 +33,11 @@
   u = User.find_or_create_by(username: "camper")
 
   u.update_attributes({
-    email:    "pats0825@msn.com",
-    username: "camper",
-    name:     "Pat",
+    email:    "twituser@user.com",
+    username: "iamuser",
+    name:     "Ima",
     location: "Ohio",
-    bio:      "I'm an odd mix of creative and analytical - which explains why I enjoy creating websites! Oh, and I love cats.",
+    bio:      "I'm a awesome programmer",
     password: "111111",
     password_confirmation: "111111",
 
