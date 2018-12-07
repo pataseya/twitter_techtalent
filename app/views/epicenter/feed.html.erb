@@ -1,0 +1,14 @@
+<div class="col-sm-9">
+     <h2>@<%= current_user.username %>'s Twitter Feed</h2>
+     <div class="well">
+       <% @following_tweets.reverse.each do |tweet| %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <%= image_tag tweet.user.avatar.url, size:25, class: "tweeter-pic-nav" %>
+              @<%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %>&nbsp&nbsp
+              <em>Posted <%= time_ago_in_words(tweet.created_at) %>&nbspago</em>
+            </div>
+          <div class="panel-body"><%= tweet.message.html_safe %></div>
+        </div>
+      <% end %>
+  </div>

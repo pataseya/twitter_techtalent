@@ -1,0 +1,23 @@
+<div>
+    <h1>HashTag Feed for <%= @tag.phrase %></h1>
+</div>
+
+
+<div class="row">
+
+
+        <% @tag.tweets.order(created_at: :desc).each do |tweet| %>
+        <div class="well">
+        <p>
+            <%= image_tag tweet.user.avatar.url, size:25, class: "tweeter-pic-nav" %>
+            <%= tweet.user.name %> <%= "@#{tweet.user.username}" %>
+            • <%= time_ago_in_words(tweet.created_at) %> ago
+        </p>
+
+            <p>&nbsp&nbsp&nbsp&nbsp
+                <%= tweet.message.html_safe %>
+            </p>
+        </div>
+    <% end %>
+
+</div>
